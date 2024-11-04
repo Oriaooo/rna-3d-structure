@@ -9,3 +9,7 @@ This repo aims to expore the different representations of a RNA 3D structure : `
 ## 1. The files formats 
 
 ➡️ [Jupyter Notebook](./1.%20Files%20formats.ipynb)
+
+## 2. The distance matrices
+
+➡️ [Jupyter Notebook](./2.%20Distance%20Matrix.ipynb)

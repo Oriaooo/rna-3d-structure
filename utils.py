@@ -1,7 +1,7 @@
 from Bio.PDB import Structure
 import numpy as np
 
-def get_coordinates_from_structure(structure: Structure, cg_atom: str) -> np.ndarray:
+def get_coordinates_from_structure(structure: Structure, atoms: list[str]=[]) -> np.ndarray:
     """Get the atom coordinates from the molecule structure
 
     Args:
@@ -16,6 +16,6 @@ def get_coordinates_from_structure(structure: Structure, cg_atom: str) -> np.nda
         for chain in model:
             for residue in chain:
                 for atom in residue:
-                    if atom.get_name() == cg_atom:
+                    if not atoms or atom.get_name() in atoms:
                         all_atoms.append(atom.get_coord().tolist())
     return np.array(all_atoms)
